@@ -13,7 +13,6 @@ URL:		http://search.cpan.org/~dclinton/%{module}
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DC/DCLINTON/%{module}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 %{module} perl module
