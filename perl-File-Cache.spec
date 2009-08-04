@@ -1,25 +1,24 @@
-%define	module	File-Cache
-%define	name	perl-%{module}
-%define	version	0.16
-%define	release	%mkrel 4
+%define	upstream_name	 File-Cache
+%define	upstream_version 0.16
 
-Name:		%{name}
-Summary:	%{module} module for perl
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/~dclinton/%{module}
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DC/DCLINTON/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/~dclinton/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DC/DCLINTON/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRequires:	perl-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{module} perl module
+%{upstream_name} perl module
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -41,4 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES CREDITS README TODO
 %{perl_vendorlib}/File/Cache.pm
 %{_mandir}/man3/*
-
