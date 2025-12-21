@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/~dclinton/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DC/DCLINTON/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
