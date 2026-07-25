@@ -2,14 +2,14 @@
 %define	upstream_version 0.16
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	%{upstream_name} module for perl
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/~dclinton/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DC/DCLINTON/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/File-Cache
+Source0:	https://cpan.metacpan.org/authors/id/D/DC/DCLINTON/File-Cache-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
