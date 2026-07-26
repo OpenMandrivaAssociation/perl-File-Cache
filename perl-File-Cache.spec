@@ -1,15 +1,13 @@
 %define	upstream_name	 File-Cache
-%define	upstream_version 0.16
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.16
+Release:	6
 
 Summary:	%{upstream_name} module for perl
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/File-Cache
-Source0:	https://cpan.metacpan.org/authors/id/D/DC/DCLINTON/File-Cache-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DC/DCLINTON/File-Cache-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 %{upstream_name} perl module
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -40,9 +38,7 @@ chmod 755 %{buildroot}%{perl_vendorlib}/File/Cache.pm
 %changelog
 * Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 0.160.0-1mdv2010.0
 + Revision: 409016
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.16-4mdv2009.0
+- rebuild using %0.16 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.16-4mdv2009.0
 + Revision: 241214
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
