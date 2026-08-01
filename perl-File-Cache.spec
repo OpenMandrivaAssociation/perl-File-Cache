@@ -2,7 +2,7 @@
 %define upstream_version 0.16
 Name:		perl-%{upstream_name}
 Version:	0.16
-Release:	2
+Release:	3
 
 Summary:	%{upstream_name} module for perl
 License:	GPL
@@ -27,6 +27,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
